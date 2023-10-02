@@ -1,0 +1,197 @@
+import { Meta, Title, Typeset } from "@storybook/blocks";
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    primary: "var(--font-primary)",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+    extrabold: "800",
+    black: "900",
+  },
+  size: {
+    headline8: 12,
+    headline7: 14,
+    headline6: 16,
+    headline5: 20,
+    headline4: 25,
+    headline3: 31,
+    headline2: 39,
+    headline1: 48,
+    body1: 16,
+    body2: 14,
+    body3: 12,
+    body4: 10,
+    tagSmall: 11,
+    tagMedium: 12,
+    tagLarge: 14,
+  },
+};
+
+export const SampleText = "Lorem ipsum dolor sit amet";
+export const SampleTextLong =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.";
+
+<Title>Tipography</Title>
+
+<strong>Univia Pro</strong> provides a clear hierarchy and a simple set of systematic
+and accessible typographic styles to apply structure to your interface.
+
+## Titles
+
+Use Univia Pro in bold for titles and headings. The font is available in 8 sizes, from <strong>12px</strong> to <strong>48px</strong>.
+
+<table style={{ width: "100%" }}>
+  <tr>
+    <th>CSS variable</th>
+    <th>Font size</th>
+    <th>Weight</th>
+  </tr>
+  <tr>
+    <td>--font-headline1</td>
+    <td>48px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline2</td>
+    <td>39px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline3</td>
+    <td>31px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline4</td>
+    <td>25px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline5</td>
+    <td>20px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline6</td>
+    <td>16px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline7</td>
+    <td>14px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-headline8</td>
+    <td>12px</td>
+    <td>700</td>
+  </tr>
+</table>
+
+Example:
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.headline1),
+    Number(typography.size.headline2),
+    Number(typography.size.headline3),
+    Number(typography.size.headline4),
+    Number(typography.size.headline5),
+    Number(typography.size.headline6),
+    Number(typography.size.headline7),
+    Number(typography.size.headline8),
+  ]}
+  fontWeight={typography.weight.black}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## Texts (regular)
+
+Use Univia Pro in regular for body text. The font is available in 4 sizes, from <strong>10px</strong> to <strong>16px</strong>.
+
+<table style={{ width: "100%" }}>
+  <tr>
+    <th>CSS variable</th>
+    <th>Font size</th>
+    <th>Weight</th>
+  </tr>
+  <tr>
+    <td>--font-body1</td>
+    <td>16px</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>--font-body2</td>
+    <td>14px</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>--font-body3</td>
+    <td>12px</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>--font-body4</td>
+    <td>10px</td>
+    <td>400</td>
+  </tr>
+</table>
+
+Example:
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.body1),
+    Number(typography.size.body2),
+    Number(typography.size.body3),
+    Number(typography.size.body4),
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleTextLong}
+  fontFamily={typography.type.primary}
+/>
+
+## Tags
+
+Use Univia Pro in bold for tags. The font is available in 3 sizes, from <strong>11px</strong> to <strong>14px</strong>.
+
+<table style={{ width: "100%" }}>
+  <tr>
+    <th>CSS variable</th>
+    <th>Font size</th>
+    <th>Weight</th>
+  </tr>
+  <tr>
+    <td>--font-tag-lg</td>
+    <td>14px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-tag-md</td>
+    <td>12px</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>--font-tag-sm</td>
+    <td>11px</td>
+    <td>700</td>
+  </tr>
+</table>
+
+Example:
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.tagLarge),
+    Number(typography.size.tagMedium),
+    Number(typography.size.tagSmall),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleTextLong}
+  fontFamily={typography.type.primary}
+/>

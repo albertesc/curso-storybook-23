@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Title,
+  Canvas,
+  Controls,
+  Description,
+  Story,
+  Source,
+  Stories,
+} from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories.js";
+
+<Meta of={ButtonStories} />
+
+<Title>Button Component</Title>
+
+Description of the Button component
+
+<Canvas of={ButtonStories.PrimaryButton} />
+
+<Controls of={ButtonStories.PrimaryButton} />
+
+<Description of={ButtonStories.SecondaryButton} />
+
+<Story of={ButtonStories.SecondaryButton} />
+
+<Source of={ButtonStories.SecondaryButton} />
+
+---
+
+<Stories />

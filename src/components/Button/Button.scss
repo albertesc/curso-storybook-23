@@ -1,0 +1,48 @@
+.button {
+    color: var(--white);
+    text-align: center;
+    font-family: Univia Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+
+    &--primary {
+        background-color: var(--primary-100);
+
+        &:hover {
+            background-color: var(--primary-70);
+        }
+
+        &:active {
+            background-color: var(--primary-100);
+        }
+    }
+
+    &--secondary {
+        background-color: var(--secondary-30);
+        color: var(--primary-100);
+
+        &:hover {
+            background-color: var(--secondary-20);
+        }
+
+        &:active {
+            background-color: var(--secondary-70);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--primary-10);
+        color: var(--primary-20);
+        cursor: not-allowed;
+    }
+}
