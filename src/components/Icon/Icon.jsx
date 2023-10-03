@@ -76,7 +76,7 @@ const ICONS = {
 }
 
 export function Icon({ width, height, name }) {
-    const svgRender = ICONS[name].svg;
+    const svgRender = ICONS[name].svgPaths;
 
     return (
         <svg 
