@@ -1,9 +1,17 @@
 import { PropTypes } from 'prop-types'
 import './Button.scss'
+import { Icon } from '../Icon/Icon'
 
-export function Button({ type, label, disabled, ...props }) {
+export function Button({ type, label, disabled, iconLeft, iconRight, ...props }) {
+    const withIconRith = iconRight ? 'button--icon' : ''
+    const classes = ["button", `button--${type}`, withIconRith].join(' ')
+
     return (
-        <button className={`button button--${type}`} disabled={disabled} {...props}>{label}</button>
+        <button className={classes} disabled={disabled} {...props}>
+            {iconLeft && <Icon name={iconLeft} />}
+            {label}
+            {iconRight && <Icon name={iconRight} />}
+        </button>
     )
 }
 
@@ -29,7 +37,11 @@ Button.propTypes = {
      * @type {boolean}
      * @optional
      */
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+
+    iconLeft: PropTypes.string,
+
+    iconRight: PropTypes.string
 }
 
 Button.defaultProps = {

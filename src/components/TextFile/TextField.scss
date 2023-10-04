@@ -1,0 +1,88 @@
+.text-field {
+    width: 100%;
+
+    &__label {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        padding: 0 10px;
+    }
+
+    &__input {
+        padding: 8px;
+        border: 1px solid var(--secondary-20);
+        border-radius: var(--input-border-radius);
+        color: var(--primary-100);
+        width: 100%;
+
+        &::placeholder {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            color: var(--gray-200)
+        }
+
+        &:hover {
+            border: 1px solid var(--secondary-50);
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid var(--secondary-100);
+            box-shadow: 0px 0px 4px 0px rgba(44, 204, 211, 0.30);
+        }
+
+        &:active {
+            border: 1px solid var(--secondary-100);
+            box-shadow: 0px 0px 4px 0px rgba(44, 204, 211, 0.30);
+        }
+
+        &:disabled {
+            background-color: var(--primary-10);
+            color: var(--primary-50);
+            border: 1px solid var(--primary-30);
+            cursor: not-allowed;
+            font-weight: 700;
+
+            &::placeholder {
+                font-weight: 700;
+                color: var(--primary-20);
+            }
+        }
+    }
+
+    &--error {
+        .text-field__input {
+            border: 1px solid var(--danger-dark);
+
+            &:hover {
+                border: 1px solid var(--danger-dark);
+            }
+
+            &:focus {
+                border: 1px solid var(--danger-dark);
+            }
+
+            &:active {
+                border: 1px solid var(--danger-dark);
+            }
+        }
+
+        .error {
+            color: var(--danger-dark);
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            margin-top: 2px;
+            padding: 0 10px;
+        }
+    }
+
+    &--disabled {
+        .text-field__label {
+            color: var(--primary-30)
+        }
+    }
+}

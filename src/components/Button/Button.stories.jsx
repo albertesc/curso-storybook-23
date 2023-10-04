@@ -1,5 +1,9 @@
 import { Button } from "./Button";
 
+const styleWrapper = { 
+    padding: "3rem"
+} 
+
 export default {
     title: "Components/Button",
     component: Button,
@@ -20,7 +24,22 @@ export default {
                 required: true,
             },
         }
-    }    
+    },
+    decorators: [
+        (Story) => (
+            <div style={styleWrapper}>
+                <Story />
+            </div>
+        )
+    ],
+    parameters: {
+        backgrounds: {
+            values: [
+                { name: "light", value: "#eee" },
+                { name: "black", value: "#000" },
+            ]
+        }
+    }
 }
 
 /**
@@ -54,5 +73,32 @@ export const DisabledButton = {
         type: "primary",
         label: "Button Disabled",
         disabled: true,
+    },
+}
+
+export const IconLeft = {
+    args: {
+        type: "primary",
+        label: "Button icon",
+        disabled: false,
+        iconLeft: "search"
+    },
+}
+
+export const IconRight = {
+    args: {
+        type: "primary",
+        label: "Button icon",
+        disabled: false,
+        iconRight: "search"
+    },
+}
+
+export const SecondaryIconRight = {
+    args: {
+        type: "secondary",
+        label: "Button icon",
+        disabled: false,
+        iconRight: "search"
     },
 }

@@ -9,6 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
+    "storybook-docs": "storybook dev --docs",
     "build-storybook": "storybook build"
   },
   "dependencies": {

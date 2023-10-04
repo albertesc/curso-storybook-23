@@ -2,7 +2,7 @@
 
 import "../src/styles/main.scss"
 
-const preview = {
+export const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -14,4 +14,15 @@ const preview = {
   },
 };
 
-export default preview;
+export const globalTypes = {
+  scheme: {
+    name: "Scheme",
+    description: "Global scheme for components",
+    defaultValue: "light",
+    toolbar: {
+      icon: "mirror",
+      items: ["light", "dark"],
+      dynamicTitle: true,
+    }
+  }
+}

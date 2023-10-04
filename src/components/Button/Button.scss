@@ -40,6 +40,10 @@
         }
     }
 
+    &--icon {
+        padding: 10px 16px 10px 24px;
+    }
+
     &:disabled {
         background-color: var(--primary-10);
         color: var(--primary-20);
