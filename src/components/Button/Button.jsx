@@ -2,9 +2,9 @@ import { PropTypes } from 'prop-types'
 import './Button.scss'
 import { Icon } from '../Icon/Icon'
 
-export function Button({ type, label, disabled, iconLeft, iconRight, ...props }) {
+export function Button({ typeButton, label, disabled, iconLeft, iconRight, ...props }) {
     const withIconRith = iconRight ? 'button--icon' : ''
-    const classes = ["button", `button--${type}`, withIconRith].join(' ')
+    const classes = ["button", `button--${typeButton}`, withIconRith].join(' ')
 
     return (
         <button className={classes} disabled={disabled} {...props}>
@@ -21,7 +21,7 @@ Button.propTypes = {
      * 
      * @type {string}
      */
-    type: PropTypes.oneOf(['primary', 'secondary']),
+    typeButton: PropTypes.oneOf(['primary', 'secondary']),
 
     /**
      * Property that determines the button type, which can be "primary" or "secondary".
@@ -45,7 +45,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-    type: 'primary',
+    typeButton: 'primary',
     label: 'Click me',
     disabled: false
 }

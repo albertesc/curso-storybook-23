@@ -8,7 +8,7 @@ export default {
     title: "Components/Button",
     component: Button,
     argTypes: {
-        type: {
+        typeButton: {
             type: {
                 name: "string",
                 required: false,
@@ -48,29 +48,29 @@ export default {
  */
 export const PrimaryButton = {
     args: {
-        type: "primary",
+        typeButton: "primary",
         label: "Primary Button",
     },
 }
 
 /**
  * This button is used for secondary actions in the UI.
- * You can customize its appearance with the `type`, `label`, and `disabled` properties.
+ * You can customize its appearance with the `typeButton`, `label`, and `disabled` properties.
  */
 export const SecondaryButton = {
     args: {
-        type: "secondary",
+        typeButton: "secondary",
         label: "Secondary Button",
     },
 }
 
 /**
  * This button is used when an action is not available at a given moment in the UI.
- * You can customize its appearance with the 'type' and 'label' properties.
+ * You can customize its appearance with the 'typeButton' and 'label' properties.
  */
 export const DisabledButton = {
     args: {
-        type: "primary",
+        typeButton: "primary",
         label: "Button Disabled",
         disabled: true,
     },
@@ -78,7 +78,7 @@ export const DisabledButton = {
 
 export const IconLeft = {
     args: {
-        type: "primary",
+        typeButton: "primary",
         label: "Button icon",
         disabled: false,
         iconLeft: "search"
@@ -87,7 +87,7 @@ export const IconLeft = {
 
 export const IconRight = {
     args: {
-        type: "primary",
+        typeButton: "primary",
         label: "Button icon",
         disabled: false,
         iconRight: "search"
@@ -96,7 +96,7 @@ export const IconRight = {
 
 export const SecondaryIconRight = {
     args: {
-        type: "secondary",
+        typeButton: "secondary",
         label: "Button icon",
         disabled: false,
         iconRight: "search"

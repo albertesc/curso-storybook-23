@@ -3,7 +3,7 @@ import { TextField } from "./TextField";
 export default {
     title: "Components/TextField",
     component: TextField,
-    tags: ["autodocs"]
+    tags: ["autodocs"],
 }
 
 export const Default = {
